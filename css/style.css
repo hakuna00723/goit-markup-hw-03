@@ -17,6 +17,12 @@
   --grey-background-cl: #f5f4fa;
 }
 
+/**
+  |============================
+  | Basic Styles
+  |============================
+*/
+
 .page {
   background-color: var(--main-background-cl);
   font-family: var(--main-font);
@@ -24,6 +30,20 @@
 }
 
 /* Reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
 .link {
   text-decoration: none;
   color: currentColor;
@@ -31,8 +51,17 @@
 
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+/* Container */
+.container {
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
 /* HEADER */
 .header-logo {
   font-family: var(--secondary-font);
@@ -62,21 +91,30 @@
   color: var(--secondary-txt-cl);
 }
 
-/* PAGE STUDIO */
+/**
+  |============================
+  | PAGE STUDIO
+  |============================
+*/
+
 /* HERO */
 .hero {
   background-color: var(--secondary-background-cl);
+  text-align: center;
 }
 .hero-title {
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--light-txt-cl);
 }
 .hero-btn {
+  min-width: 216px;
+  min-height: 50px;
+  padding: 10px 32px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -95,7 +133,13 @@
   opacity: 0;
 } */
 
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .features-title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -111,6 +155,7 @@
 
 /* FUNCTION */
 .function-title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
@@ -178,7 +223,11 @@
   color: var(--blue-cl);
 }
 
-/* PAGE PORTFOLIO */
+/**
+  |============================
+  | PAGE PORTFOLIO
+  |============================
+*/
 
 /* .gallery-main-title {
   opacity: 0;
