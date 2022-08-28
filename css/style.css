@@ -16,8 +16,12 @@
   --secondary-background-cl: #2f303a;
   --grey-background-cl: #f5f4fa;
 
+  /* Button */
+  --dark-blue-cl: #188ce8;
+
   /* Border colors */
   --header-brdr-cl: #ececec;
+  --cards-brdr-cl: #eeeeee;
 }
 
 /**
@@ -45,6 +49,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
@@ -146,10 +152,15 @@ img {
 
 /* HERO */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--secondary-background-cl);
   text-align: center;
 }
 .hero-title {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
@@ -161,7 +172,7 @@ img {
 .hero-btn {
   min-width: 216px;
   min-height: 50px;
-  padding: 10px 32px;
+  padding: 10px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -173,11 +184,18 @@ img {
   border-style: none;
   border-radius: 4px;
 }
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--dark-blue-cl);
+}
 
 /* FEATURES */
 .features-list {
   display: flex;
   gap: 30px;
+}
+.features-list-item {
+  width: 270px;
 }
 .features-title {
   margin-bottom: 10px;
@@ -235,10 +253,9 @@ img {
   background-color: var(--main-background-cl);
   border-radius: 0px 0px 4px 4px;
 }
-.team-img {
-  margin-bottom: 30px;
+.txt-part {
+  padding: 30px;
 }
-
 .name {
   margin-bottom: 10px;
   font-weight: 500;
@@ -248,7 +265,6 @@ img {
   color: var(--main-txt-cl);
 }
 .profession {
-  margin-bottom: 30px;
   line-height: calc(19 / 16);
   letter-spacing: 0.03em;
   color: var(--secondary-txt-cl);
@@ -262,7 +278,7 @@ img {
 }
 .footer-logo {
   display: block;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
@@ -274,15 +290,18 @@ img {
 .info {
   font-style: normal;
 }
+.info-list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 .adress-link {
   display: block;
-  margin-bottom: 9px;
+
   letter-spacing: 0.03em;
   color: var(--light-txt-cl);
 }
 .info-link {
   display: block;
-  margin-bottom: 9px;
+
   letter-spacing: 0.03em;
   color: var(--info-txt-cl);
 }
@@ -309,7 +328,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 .gallery .btn {
   font-family: inherit;
@@ -324,8 +343,8 @@ img {
 .btn:hover,
 .btn:focus,
 .btn.active {
-  padding-left: 25px;
-  padding-right: 25px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   color: var(--light-txt-cl);
   background-color: var(--blue-cl);
 }
@@ -336,8 +355,23 @@ img {
   gap: 30px;
 }
 
+.gallery-list-item {
+  width: 370px;
+}
+
+/* ЛАМАЄТЬСЯ СІТКА!!! 
+При розрахуванні за формулою додає незрозумілий,
+ лівий маржин до картинки,
+ розтягуючи лішку до 390px (має бути 370px) */
+
+/* .gallery-list-item {
+  flex-basis: calc((100%-30px * 2) / 3);
+} */
+
 .gallery-txt {
   padding: 20px 24px;
+  border: 1px solid var(--cards-brdr-cl);
+  border-top: none;
 }
 
 .gallery-title {
